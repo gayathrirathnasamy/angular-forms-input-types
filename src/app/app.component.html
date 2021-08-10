@@ -1,0 +1,18 @@
+<h1>Drop Down</h1>
+<select (change)="onDropDownChange($event)">
+  <option value="null">----</option>
+  <option *ngFor="let opt of dropDownOptions" [value]='opt'>{{opt}}</option>
+</select>
+<div>Selected Value: {{selectedOption}}</div>
+<select (change)="onDropDownChange1($event)">
+<option value="default">----</option>
+<option *ngFor="let opt of dropDownOptions1" [value]='opt.name'>
+  {{opt.name}}</option>
+</select>
+<div>Selected Value: {{selectedOption1}}</div>
+
+
+<h1>Slider</h1>
+<label for="point">Select from slider</label>
+<input type="range" min="10000" max="20000" step="1000" (change)="onSliderChange($event)">
+<div>Selected Range: {{selectedRange}}</div>
